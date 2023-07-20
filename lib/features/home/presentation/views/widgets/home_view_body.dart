@@ -4,6 +4,7 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:size_config/size_config.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -24,17 +25,17 @@ class CustomAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 45),
+      padding: EdgeInsets.symmetric(horizontal: 26.w, vertical: 70.h),
       child: Row(
         children: [
           SvgPicture.asset(AsssetsData.logo),
           const Spacer(),
-          const Icon(
+          Icon(
             FontAwesomeIcons.magnifyingGlass,
-            size: 22,
+            size: 32.h,
           ),
-          const SizedBox(
-            width: 4,
+          SizedBox(
+            width: 4.w,
           )
         ],
       ),
