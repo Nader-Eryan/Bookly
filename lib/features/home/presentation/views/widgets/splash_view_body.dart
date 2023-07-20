@@ -1,10 +1,13 @@
+import 'package:e_book/constants.dart';
 import 'package:e_book/core/utils/assets.dart';
+import 'package:e_book/features/home/presentation/views/home_view.dart';
 import 'package:e_book/features/home/presentation/views/widgets/sliding_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 import 'package:size_config/size_config.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -21,6 +24,18 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   void initState() {
     super.initState();
+    initSlidingAnimation();
+    navigateToHome();
+  }
+
+  void navigateToHome() {
+    Future.delayed(const Duration(seconds: 2), () {
+      Get.to(const HomeView(),
+          duration: kTransitionDuration, transition: Transition.fadeIn);
+    });
+  }
+
+  void initSlidingAnimation() {
     animationController = AnimationController(
         vsync: this, duration: const Duration(milliseconds: 1500));
     slidingAnimation =
