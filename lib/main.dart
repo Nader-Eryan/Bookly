@@ -2,6 +2,7 @@ import 'package:e_book/constants.dart';
 import 'package:e_book/features/home/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:size_config/size_config.dart';
 
 void main() {
@@ -18,8 +19,10 @@ class Ebook extends StatelessWidget {
               debugShowCheckedModeBanner: false,
               theme: ThemeData.dark().copyWith(
                 scaffoldBackgroundColor: kPrimaryColor,
+                textTheme: GoogleFonts.montserratAlternatesTextTheme(
+                    ThemeData.dark().textTheme),
               ),
-              home: SplashView(),
+              home: const SplashView(),
             ),
         referenceHeight: 900,
         referenceWidth: 360);
