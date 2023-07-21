@@ -1,4 +1,4 @@
-import 'package:flutter/src/widgets/container.dart';
+// ignore: implementation_imports
 import 'package:flutter/src/widgets/framework.dart';
 
 import 'widgets/splash_view_body.dart';
@@ -8,6 +8,6 @@ class SplashView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SplashViewBody();
+    return const SplashViewBody();
   }
 }
