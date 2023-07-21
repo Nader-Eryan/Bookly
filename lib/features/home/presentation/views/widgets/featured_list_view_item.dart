@@ -9,9 +9,9 @@ class FeaturedListViewItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 290.h,
+        height: 250.h,
         child: AspectRatio(
-          aspectRatio: 2 / 3,
+          aspectRatio: 2.1 / 3,
           child: Container(
             decoration: BoxDecoration(
                 image: const DecorationImage(
