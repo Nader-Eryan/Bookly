@@ -1,10 +1,9 @@
-import 'package:e_book/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:size_config/size_config.dart';
 
+import 'best_seller_list_item.dart';
+import 'best_seller_text.dart';
 import 'custom_app_bar.dart';
 import 'featured_list_view.dart';
-import 'featured_list_view_item.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -16,17 +15,11 @@ class HomeViewBody extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const CustomAppBar(),
-            const FeaturedListView(),
-            Padding(
-              padding: EdgeInsets.only(
-                  left: 8.h, right: 8.h, top: 50.h, bottom: 20.h),
-              child: const Text(
-                'Best Seller',
-                style: Styles.titleMedium,
-              ),
-            ),
+          children: const [
+            CustomAppBar(),
+            FeaturedListView(),
+            BestSellerText(),
+            BestSellerListViewItem(),
           ],
         ),
       ),
