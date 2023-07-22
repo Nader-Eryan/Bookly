@@ -15,7 +15,7 @@ class BestSellerListViewItem extends StatelessWidget {
       child: Row(
         children: [
           SizedBox(
-              height: 130.h,
+              height: 140.h,
               child: AspectRatio(
                 aspectRatio: 2 / 3,
                 child: Container(
@@ -27,22 +27,36 @@ class BestSellerListViewItem extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4)),
                 ),
               )),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 16),
-                child: SizedBox(
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                SizedBox(
                   width: 200.w,
-                  child: Text(
+                  child: const Text(
                     'Harry Potter and the Goblet of Fire',
-                    style:
-                        Styles.textStyle20.copyWith(fontFamily: kGTSectraFine),
+                    style: Styles.textStyle20,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                   ),
                 ),
-              )
-            ],
+                const SizedBox(
+                  height: 3,
+                ),
+                Text(
+                  'J.K. Rowling',
+                  style: Styles.textStyle14.copyWith(color: Colors.grey),
+                ),
+                const SizedBox(
+                  height: 3,
+                ),
+                const Text(
+                  '19.99 €',
+                  style: Styles.textStyle20,
+                )
+              ],
+            ),
           ),
         ],
       ),
