@@ -14,7 +14,7 @@ class BestSellerText extends StatelessWidget {
       padding: EdgeInsets.only(left: 8.h, right: 8.h, top: 50.h, bottom: 20.h),
       child: const Text(
         'Best Seller',
-        style: Styles.titleMedium,
+        style: Styles.textStyle18,
       ),
     );
   }
