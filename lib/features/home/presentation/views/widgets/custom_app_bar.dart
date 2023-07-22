@@ -15,11 +15,13 @@ class CustomAppBar extends StatelessWidget {
           EdgeInsets.only(left: 12.w, right: 12.w, top: 70.h, bottom: 40.h),
       child: Row(
         children: [
-          SvgPicture.asset(AsssetsData.logo),
+          SvgPicture.asset(
+            AsssetsData.logo,
+          ),
           const Spacer(),
           Icon(
             FontAwesomeIcons.magnifyingGlass,
-            size: 32.h,
+            size: 28.h,
           ),
           SizedBox(
             width: 4.w,

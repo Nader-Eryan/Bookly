@@ -11,7 +11,7 @@ class BestSellerText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: 8.h, right: 8.h, top: 50.h, bottom: 20.h),
+      padding: EdgeInsets.only(left: 10.w, right: 8.w, top: 50.h, bottom: 10.h),
       child: const Text(
         'Best Seller',
         style: Styles.textStyle18,
