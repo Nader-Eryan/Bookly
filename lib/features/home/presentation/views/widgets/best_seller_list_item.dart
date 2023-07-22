@@ -1,5 +1,6 @@
 import 'package:e_book/constants.dart';
 import 'package:e_book/core/utils/styles.dart';
+import 'package:e_book/features/home/presentation/views/widgets/best_seller_item_rating_row.dart';
 import 'package:flutter/material.dart';
 import 'package:size_config/size_config.dart';
 
@@ -33,7 +34,7 @@ class BestSellerListViewItem extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 SizedBox(
-                  width: 200.w,
+                  width: 210.w,
                   child: const Text(
                     'Harry Potter and the Goblet of Fire',
                     style: Styles.textStyle20,
@@ -51,10 +52,7 @@ class BestSellerListViewItem extends StatelessWidget {
                 const SizedBox(
                   height: 3,
                 ),
-                const Text(
-                  '19.99 €',
-                  style: Styles.textStyle20,
-                )
+                SizedBox(width: 210.w, child: const RatingRow()),
               ],
             ),
           ),
