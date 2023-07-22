@@ -1,3 +1,5 @@
+import 'package:e_book/constants.dart';
+import 'package:e_book/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:size_config/size_config.dart';
 
@@ -25,7 +27,23 @@ class BestSellerListViewItem extends StatelessWidget {
                       borderRadius: BorderRadius.circular(4)),
                 ),
               )),
-          Column(),
+          Column(
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 16),
+                child: SizedBox(
+                  width: 200.w,
+                  child: Text(
+                    'Harry Potter and the Goblet of Fire',
+                    style:
+                        Styles.textStyle20.copyWith(fontFamily: kGTSectraFine),
+                    maxLines: 2,
+                    overflow: TextOverflow.ellipsis,
+                  ),
+                ),
+              )
+            ],
+          ),
         ],
       ),
     );
