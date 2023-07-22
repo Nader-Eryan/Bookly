@@ -1,4 +1,4 @@
-# e_book
+# Bookly
 
 A new Flutter project.
 
