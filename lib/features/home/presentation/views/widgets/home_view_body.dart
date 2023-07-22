@@ -12,7 +12,7 @@ class HomeViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 14),
+        padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 14),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: const [
