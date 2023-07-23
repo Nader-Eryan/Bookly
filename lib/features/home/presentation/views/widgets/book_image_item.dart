@@ -1,5 +1,6 @@
-import 'package:size_config/size_config.dart';
 import 'package:flutter/material.dart';
+import 'package:size_config/size_config.dart';
+
 import '../../../../../core/utils/assets.dart';
 
 class BookImageItem extends StatelessWidget {
