@@ -15,7 +15,7 @@ class Ebook extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizeConfigInit(
         builder: (context, orientation) => MaterialApp.router(
-              routerConfig: AppRuter.router,
+              routerConfig: AppRouter.router,
               debugShowCheckedModeBanner: false,
               theme: ThemeData.dark().copyWith(
                 scaffoldBackgroundColor: kPrimaryColor,

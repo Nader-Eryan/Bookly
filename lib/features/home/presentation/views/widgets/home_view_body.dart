@@ -20,6 +20,7 @@ class HomeViewBody extends StatelessWidget {
           floating: true,
           pinned: false,
           expandedHeight: 50.h,
+
           elevation: 0,
           backgroundColor: kPrimaryColor,
           automaticallyImplyLeading: false,
