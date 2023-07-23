@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -16,20 +15,20 @@ class RatingRow extends StatelessWidget {
             '19.99 €',
             style: Styles.textStyle20.copyWith(fontWeight: FontWeight.bold),
           ),
-          Spacer(),
-          Icon(
+          const Spacer(),
+          const Icon(
             FontAwesomeIcons.solidStar,
             color: Color(0xffFFDD4F),
             size: 14,
           ),
-          SizedBox(
+          const SizedBox(
             width: 6.3,
           ),
           Text(
             '4.8',
             style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
           ),
-          SizedBox(
+          const SizedBox(
             width: 5,
           ),
           Text(
