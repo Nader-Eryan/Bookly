@@ -1,15 +1,14 @@
-import 'package:flutter/cupertino.dart';
 import 'package:size_config/size_config.dart';
-
+import 'package:flutter/material.dart';
 import '../../../../../core/utils/assets.dart';
 
-class FeaturedListViewItem extends StatelessWidget {
-  const FeaturedListViewItem({super.key});
+class BookImageItem extends StatelessWidget {
+  const BookImageItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 250.h,
+        height: 300.h,
         child: AspectRatio(
           aspectRatio: 2.1 / 3,
           child: Container(
