@@ -17,7 +17,8 @@ class HomeViewBody extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(slivers: [
         SliverAppBar(
-          pinned: true,
+          floating: true,
+          pinned: false,
           expandedHeight: 50.h,
           elevation: 0,
           backgroundColor: kPrimaryColor,
