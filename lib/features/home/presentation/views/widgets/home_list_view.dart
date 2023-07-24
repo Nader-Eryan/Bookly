@@ -6,8 +6,8 @@ import 'package:size_config/size_config.dart';
 
 import '../../../../../core/utils/app_router.dart';
 
-class BestSellerListView extends StatelessWidget {
-  const BestSellerListView({super.key});
+class HomeListView extends StatelessWidget {
+  const HomeListView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class BestSellerListView extends StatelessWidget {
           child: GestureDetector(
             child: const BestSellerListViewItem(),
             onTap: () {
-              GoRouter.of(context).push('/${AppRouter.kBookDetailsView}');
+              GoRouter.of(context).push(AppRouter.kBookDetailsView);
             },
           ),
         );

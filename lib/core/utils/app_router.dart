@@ -4,9 +4,12 @@ import 'package:e_book/features/home/presentation/views/splash_view.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../features/search/presentation/views/search_view.dart';
+
 abstract class AppRouter {
-  static const kHomeView = 'homeView';
-  static const kBookDetailsView = 'bookDetailsView';
+  static const kHomeView = '/homeView';
+  static const kBookDetailsView = '/bookDetailsView';
+  static const kSearchView = '/searchView';
   static GoRouter router = GoRouter(
     initialLocation: '/',
     routes: <RouteBase>[
@@ -15,20 +18,22 @@ abstract class AppRouter {
         builder: (BuildContext context, GoRouterState state) {
           return const SplashView();
         },
-        routes: <RouteBase>[
-          GoRoute(
-            path: kHomeView,
-            builder: (BuildContext context, GoRouterState state) {
-              return const HomeView();
-            },
-          ),
-          GoRoute(
-            path: kBookDetailsView,
-            builder: (BuildContext context, GoRouterState state) {
-              return const BookDetailsView();
-            },
-          ),
-        ],
+      ),
+      GoRoute(
+        path: kSearchView,
+        builder: ((context, state) => const SearchView()),
+      ),
+      GoRoute(
+        path: kHomeView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const HomeView();
+        },
+      ),
+      GoRoute(
+        path: kBookDetailsView,
+        builder: (BuildContext context, GoRouterState state) {
+          return const BookDetailsView();
+        },
       ),
     ],
   );

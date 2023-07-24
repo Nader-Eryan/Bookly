@@ -1,10 +1,12 @@
 import 'package:e_book/constants.dart';
-import 'package:e_book/features/home/presentation/views/widgets/best_seller_list_view.dart';
+import 'package:e_book/features/home/presentation/views/widgets/home_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:go_router/go_router.dart';
 import 'package:size_config/size_config.dart';
 
+import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/assets.dart';
 import 'best_seller_text.dart';
 import 'featured_list_view.dart';
@@ -20,11 +22,9 @@ class HomeViewBody extends StatelessWidget {
           floating: true,
           pinned: false,
           expandedHeight: 50.h,
-
           elevation: 0,
           backgroundColor: kPrimaryColor,
           automaticallyImplyLeading: false,
-          // flexibleSpace: CustomAppBar(),
           actions: <Widget>[
             SizedBox(
               width: 28.w,
@@ -33,9 +33,12 @@ class HomeViewBody extends StatelessWidget {
               AsssetsData.logo,
             ),
             const Spacer(),
-            Icon(
-              FontAwesomeIcons.magnifyingGlass,
-              size: 28.h,
+            IconButton(
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kSearchView);
+              },
+              icon: const Icon(FontAwesomeIcons.magnifyingGlass),
+              iconSize: 28.h,
             ),
             SizedBox(
               width: 4.w,
@@ -60,7 +63,7 @@ class HomeViewBody extends StatelessWidget {
         SliverFillRemaining(
           child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
-              child: const BestSellerListView()),
+              child: const HomeListView()),
         )
       ]),
     );
