@@ -2,6 +2,7 @@ import 'package:e_book/features/home/presentation/views/widgets/Book_Image_Item.
 import 'package:e_book/features/home/presentation/views/widgets/book_details_custom_button.dart';
 import 'package:e_book/features/home/presentation/views/widgets/book_details_rating_row.dart';
 import 'package:e_book/features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
+import 'package:e_book/features/home/presentation/views/widgets/two_buttons_price_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:size_config/size_config.dart';
 
@@ -44,32 +45,7 @@ class BookDetailsViewBody extends StatelessWidget {
           const SizedBox(
             height: 25,
           ),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 38.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: const [
-                BookDetailsCustomButton(
-                  backGroundColor: Colors.white,
-                  borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(12),
-                      bottomLeft: Radius.circular(12)),
-                  text: '19.99€',
-                  textColor: Colors.black,
-                ),
-                BookDetailsCustomButton(
-                  backGroundColor: Color(0xffEF8262),
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(12),
-                      bottomRight: Radius.circular(12)),
-                  text: 'Free preview',
-                  textSize: 14,
-                  textColor: Colors.white,
-                  fontWeight: FontWeight.w500,
-                ),
-              ],
-            ),
-          )
+          const TwoButtonsPricePreview(),
         ],
       ),
     );
