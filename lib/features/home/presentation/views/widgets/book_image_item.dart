@@ -9,7 +9,7 @@ class BookImageItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        height: 275.h,
+        height: 260.h,
         child: AspectRatio(
           aspectRatio: 2.1 / 3,
           child: Container(
@@ -18,7 +18,7 @@ class BookImageItem extends StatelessWidget {
                   image: AssetImage(AsssetsData.testImage),
                   fit: BoxFit.fill,
                 ),
-                borderRadius: BorderRadius.circular(16)),
+                borderRadius: BorderRadius.circular(12)),
           ),
         ));
   }

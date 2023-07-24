@@ -1,5 +1,5 @@
 import 'package:e_book/features/home/presentation/views/widgets/Book_Image_Item.dart';
-import 'package:e_book/features/home/presentation/views/widgets/book_details_custom_button.dart';
+import 'package:e_book/features/home/presentation/views/widgets/book_details_list_view.dart';
 import 'package:e_book/features/home/presentation/views/widgets/book_details_rating_row.dart';
 import 'package:e_book/features/home/presentation/views/widgets/custom_book_details_app_bar.dart';
 import 'package:e_book/features/home/presentation/views/widgets/two_buttons_price_preview.dart';
@@ -46,6 +46,20 @@ class BookDetailsViewBody extends StatelessWidget {
             height: 25,
           ),
           const TwoButtonsPricePreview(),
+          Padding(
+            padding: const EdgeInsets.only(top: 30, left: 30, bottom: 10),
+            child: Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                'You can also like',
+                style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w700),
+              ),
+            ),
+          ),
+          const Padding(
+            padding: EdgeInsets.only(left: 24),
+            child: BookDetailsListView(),
+          ),
         ],
       ),
     );
