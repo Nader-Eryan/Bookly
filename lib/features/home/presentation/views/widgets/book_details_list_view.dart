@@ -11,6 +11,7 @@ class BookDetailsListView extends StatelessWidget {
     return SizedBox(
       height: 130.h,
       child: ListView.builder(
+        physics: const BouncingScrollPhysics(),
         scrollDirection: Axis.horizontal,
         itemBuilder: (context, index) {
           return Padding(

@@ -17,7 +17,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: CustomScrollView(slivers: [
+      body: CustomScrollView(physics: const BouncingScrollPhysics(), slivers: [
         SliverAppBar(
           floating: true,
           pinned: false,

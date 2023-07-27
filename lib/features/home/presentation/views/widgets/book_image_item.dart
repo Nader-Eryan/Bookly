@@ -1,3 +1,5 @@
+import 'package:cached_network_image/cached_network_image.dart';
+import 'package:e_book/core/widgets/custom_error_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:size_config/size_config.dart';
 
@@ -10,13 +12,11 @@ class BookImageItem extends StatelessWidget {
         height: 260.h,
         child: AspectRatio(
           aspectRatio: 2.1 / 3,
-          child: Container(
-            decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: NetworkImage(image),
-                  fit: BoxFit.fill,
-                ),
-                borderRadius: BorderRadius.circular(12)),
+          child: CachedNetworkImage(
+            errorWidget: (context, url, error) =>
+                const CustomErrorWidget(errMessage: 'Image not found!'),
+            fit: BoxFit.fill,
+            imageUrl: image,
           ),
         ));
   }
