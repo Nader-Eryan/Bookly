@@ -20,7 +20,10 @@ class BookImageDetailsSection extends StatelessWidget {
             child: CustomBookDetailsAppBar()),
         Padding(
           padding: EdgeInsets.only(left: 20.w, right: 20.w, top: 16.h),
-          child: const BookImageItem(),
+          child: const BookImageItem(
+            image:
+                'https://iso.500px.com/wp-content/uploads/2016/03/stock-photo-142984111.jpg',
+          ),
         ),
         const SizedBox(
           height: 35,
