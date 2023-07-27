@@ -25,10 +25,12 @@ class Ebook extends StatelessWidget {
               providers: [
                 BlocProvider(
                     create: (context) =>
-                        FeaturedBooksCubit(getIt.get<HomeRepoImpl>())),
+                        FeaturedBooksCubit(getIt.get<HomeRepoImpl>())
+                          ..fetchFeaturedBooks()),
                 BlocProvider(
                     create: (context) =>
-                        NewestBookCubit(getIt.get<HomeRepoImpl>())),
+                        NewestBookCubit(getIt.get<HomeRepoImpl>())
+                          ..fetchNewestBooks()),
               ],
               child: MaterialApp.router(
                 routerConfig: AppRouter.router,
