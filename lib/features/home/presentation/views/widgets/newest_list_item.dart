@@ -1,13 +1,13 @@
 import 'package:e_book/core/utils/styles.dart';
-import 'package:e_book/features/home/presentation/views/widgets/best_seller_item_rating_row.dart';
+import 'package:e_book/features/home/data/models/book_model/book_model.dart';
+import 'package:e_book/features/home/presentation/views/widgets/newest_item_rating_row.dart';
 import 'package:flutter/material.dart';
 import 'package:size_config/size_config.dart';
 
-import '../../../../../core/utils/assets.dart';
+class NewestListViewItem extends StatelessWidget {
+  const NewestListViewItem({super.key, required this.bookModel});
 
-class BestSellerListViewItem extends StatelessWidget {
-  const BestSellerListViewItem({super.key});
-
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,8 +20,9 @@ class BestSellerListViewItem extends StatelessWidget {
                 aspectRatio: 2 / 3,
                 child: Container(
                   decoration: BoxDecoration(
-                      image: const DecorationImage(
-                        image: AssetImage(AsssetsData.testImage),
+                      image: DecorationImage(
+                        image: NetworkImage(
+                            bookModel.volumeInfo.imageLinks.thumbnail),
                         fit: BoxFit.fill,
                       ),
                       borderRadius: BorderRadius.circular(4)),
@@ -34,8 +35,8 @@ class BestSellerListViewItem extends StatelessWidget {
               children: [
                 SizedBox(
                   width: 210.w,
-                  child: const Text(
-                    'Harry Potter and the Goblet of Fire',
+                  child: Text(
+                    bookModel.volumeInfo.title!,
                     style: Styles.textStyle20,
                     maxLines: 2,
                     overflow: TextOverflow.ellipsis,
@@ -45,13 +46,15 @@ class BestSellerListViewItem extends StatelessWidget {
                   height: 3,
                 ),
                 Text(
-                  'J.K. Rowling',
+                  bookModel.volumeInfo.authors == null
+                      ? 'No Title available'
+                      : bookModel.volumeInfo.authors![0],
                   style: Styles.textStyle14.copyWith(color: Colors.grey),
                 ),
                 const SizedBox(
                   height: 3,
                 ),
-                SizedBox(width: 210.w, child: const RatingRow()),
+                SizedBox(width: 210.w, child: RatingRow()),
               ],
             ),
           ),

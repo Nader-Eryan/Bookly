@@ -12,11 +12,14 @@ class BookImageItem extends StatelessWidget {
         height: 260.h,
         child: AspectRatio(
           aspectRatio: 2.1 / 3,
-          child: CachedNetworkImage(
-            errorWidget: (context, url, error) =>
-                const CustomErrorWidget(errMessage: 'Image not found!'),
-            fit: BoxFit.fill,
-            imageUrl: image,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(16),
+            child: CachedNetworkImage(
+              errorWidget: (context, url, error) =>
+                  const CustomErrorWidget(errMessage: 'Image not found!'),
+              fit: BoxFit.fill,
+              imageUrl: image,
+            ),
           ),
         ));
   }

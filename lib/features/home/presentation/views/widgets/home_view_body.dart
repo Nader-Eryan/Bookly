@@ -8,7 +8,7 @@ import 'package:size_config/size_config.dart';
 
 import '../../../../../core/utils/app_router.dart';
 import '../../../../../core/utils/assets.dart';
-import 'best_seller_text.dart';
+import 'newest_text.dart';
 import 'featured_list_view.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -63,7 +63,7 @@ class HomeViewBody extends StatelessWidget {
         SliverFillRemaining(
           child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
-              child: const HomeListView()),
+              child: const NewestBookListView()),
         )
       ]),
     );

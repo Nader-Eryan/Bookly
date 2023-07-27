@@ -1,4 +1,4 @@
-import 'package:e_book/features/home/presentation/views/widgets/best_seller_list_item.dart';
+import 'package:e_book/features/home/presentation/views/widgets/newest_list_item.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
@@ -19,7 +19,8 @@ class SearchListView extends StatelessWidget {
         return Padding(
           padding: EdgeInsets.symmetric(vertical: 8.h),
           child: GestureDetector(
-            child: const BestSellerListViewItem(),
+            //child: NewestListViewItem(),
+            child: Text(''),
             onTap: () {
               GoRouter.of(context).push(AppRouter.kBookDetailsView);
             },
