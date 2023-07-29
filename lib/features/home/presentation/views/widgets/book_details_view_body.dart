@@ -1,3 +1,4 @@
+import 'package:e_book/features/home/data/models/book_model/book_model.dart';
 import 'package:e_book/features/home/presentation/views/widgets/book_details_list_view.dart';
 import 'package:e_book/features/home/presentation/views/widgets/book_image_details_section.dart';
 import 'package:e_book/features/home/presentation/views/widgets/two_buttons_price_preview.dart';
@@ -7,8 +8,8 @@ import '../../../../../core/utils/constants.dart';
 import '../../../../../core/utils/styles.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
-  const BookDetailsViewBody({super.key});
-
+  const BookDetailsViewBody({super.key, required this.bookModel});
+  final BookModel bookModel;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -36,9 +37,11 @@ class BookDetailsViewBody extends StatelessWidget {
                   ),
                 ),
               ),
-              const Padding(
-                padding: EdgeInsets.only(left: 24),
-                child: BookDetailsListView(),
+              Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: BookDetailsListView(
+                  bookModel: bookModel,
+                ),
               ),
             ],
           ),

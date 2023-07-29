@@ -1,0 +1,27 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
+part of 'similar_books_cubit.dart';
+
+abstract class SimilarBooksState extends Equatable {
+  const SimilarBooksState();
+
+  @override
+  List<Object> get props => [];
+}
+
+class SimilarBooksInitial extends SimilarBooksState {}
+
+class SimilarBooksSuccess extends SimilarBooksState {
+  final List<BookModel> books;
+  const SimilarBooksSuccess({
+    required this.books,
+  });
+}
+
+class SimilarBooksFailure extends SimilarBooksState {
+  final String errMessage;
+  const SimilarBooksFailure({
+    required this.errMessage,
+  });
+}
+
+class SimilarBooksLoading extends SimilarBooksState {}
