@@ -16,7 +16,7 @@ class VolumeInfo extends Equatable {
   final String? maturityRating;
   final bool? allowAnonLogging;
   final String? contentVersion;
-  final ImageLinks imageLinks;
+  final ImageLinks? imageLinks;
   final String? language;
   final String? previewLink;
   final String? infoLink;
@@ -34,7 +34,7 @@ class VolumeInfo extends Equatable {
     this.maturityRating,
     this.allowAnonLogging,
     this.contentVersion,
-    required this.imageLinks,
+    this.imageLinks,
     this.language,
     this.previewLink,
     this.infoLink,
@@ -58,8 +58,9 @@ class VolumeInfo extends Equatable {
         maturityRating: json['maturityRating'] as String?,
         allowAnonLogging: json['allowAnonLogging'] as bool?,
         contentVersion: json['contentVersion'] as String?,
-        imageLinks:
-            ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
+        imageLinks: json['imageLinks'] == null
+            ? null
+            : ImageLinks.fromJson(json['imageLinks'] as Map<String, dynamic>),
         language: json['language'] as String?,
         previewLink: json['previewLink'] as String?,
         infoLink: json['infoLink'] as String?,
@@ -79,7 +80,7 @@ class VolumeInfo extends Equatable {
         'maturityRating': maturityRating,
         'allowAnonLogging': allowAnonLogging,
         'contentVersion': contentVersion,
-        'imageLinks': imageLinks.toJson(),
+        'imageLinks': imageLinks,
         'language': language,
         'previewLink': previewLink,
         'infoLink': infoLink,

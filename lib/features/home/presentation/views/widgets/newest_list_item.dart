@@ -22,7 +22,7 @@ class NewestListViewItem extends StatelessWidget {
                   decoration: BoxDecoration(
                       image: DecorationImage(
                         image: NetworkImage(
-                            bookModel.volumeInfo.imageLinks.thumbnail),
+                            bookModel.volumeInfo.imageLinks?.thumbnail ?? ''),
                         fit: BoxFit.fill,
                       ),
                       borderRadius: BorderRadius.circular(4)),
@@ -54,7 +54,7 @@ class NewestListViewItem extends StatelessWidget {
                 const SizedBox(
                   height: 3,
                 ),
-                SizedBox(width: 210.w, child: RatingRow()),
+                SizedBox(width: 210.w, child: const RatingRow()),
               ],
             ),
           ),

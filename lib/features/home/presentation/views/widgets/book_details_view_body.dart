@@ -3,7 +3,7 @@ import 'package:e_book/features/home/presentation/views/widgets/book_image_detai
 import 'package:e_book/features/home/presentation/views/widgets/two_buttons_price_preview.dart';
 import 'package:flutter/material.dart';
 
-import '../../../../../constants.dart';
+import '../../../../../core/utils/constants.dart';
 import '../../../../../core/utils/styles.dart';
 
 class BookDetailsViewBody extends StatelessWidget {

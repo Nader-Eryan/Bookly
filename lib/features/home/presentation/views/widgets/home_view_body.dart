@@ -1,4 +1,4 @@
-import 'package:e_book/constants.dart';
+import 'package:e_book/core/utils/constants.dart';
 import 'package:e_book/features/home/presentation/views/widgets/home_list_view.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
